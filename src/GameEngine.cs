@@ -1,9 +1,9 @@
 using System;
-using Battles;
-using Enemies;
-using Players;
+using GladiatorGame.Battles;
+using GladiatorGame.Enemies;
+using GladiatorGame.Players;
 
-namespace SimpleGameEngine
+namespace GladiatorGame.SimpleGameEngine
 {
 
     public class GameEngine
@@ -66,9 +66,7 @@ namespace SimpleGameEngine
             System.Console.WriteLine("'equip [Name of weapon]' to change weapon");
             System.Console.WriteLine("'fight' to fight your next oponent in the Colosseum");
             System.Console.WriteLine("'q' to quit the game");
-
         }
-
     }
 
 }

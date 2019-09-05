@@ -1,6 +1,6 @@
-using Weapons;
+using GladiatorGame.Weapons;
 
-namespace Attacks
+namespace GladiatorGame.Attacker
 {
     
     public interface IAttacker<T> 

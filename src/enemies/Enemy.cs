@@ -1,9 +1,9 @@
-using Weapons;
-using Attacks;
-using Entities;
+using GladiatorGame.Weapons;
+using GladiatorGame.Attacker;
+using GladiatorGame.Entities;
 using System;
 
-namespace Enemies
+namespace GladiatorGame.Enemies
 {
 
     public class Enemy : Entity, IAttacker<Entity>

@@ -1,9 +1,9 @@
 using System;
 using System.Collections.Generic;
-using Players;
-using Weapons;
+using GladiatorGame.Players;
+using GladiatorGame.Weapons;
 
-namespace Enemies
+namespace GladiatorGame.Enemies
 {
 
     public class EnemyFactory

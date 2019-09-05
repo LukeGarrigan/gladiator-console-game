@@ -1,6 +1,6 @@
-using Weapons;
+using GladiatorGame.Weapons;
 
-namespace Entities
+namespace GladiatorGame.Entities
 {
 
 

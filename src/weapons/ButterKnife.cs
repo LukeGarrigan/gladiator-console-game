@@ -1,4 +1,4 @@
-namespace Weapons
+namespace GladiatorGame.Weapons
 {
     public class ButterKnife : Weapon 
     { 

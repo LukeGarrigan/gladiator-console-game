@@ -1,11 +1,11 @@
 using System.Threading;
 using System.Threading.Tasks;
-using Attacks;
-using Enemies;
-using Entities;
-using Players;
+using GladiatorGame.Attacker;
+using GladiatorGame.Enemies;
+using GladiatorGame.Entities;
+using GladiatorGame.Players;
 
-namespace Battles
+namespace GladiatorGame.Battles
 {
     public class Battle
     {

@@ -1,8 +1,8 @@
 ﻿using System;
-using Players;
-using SimpleGameEngine;
+using GladiatorGame.Players;
+using GladiatorGame.SimpleGameEngine;
 
-namespace first_console_game
+namespace GladiatorGame
 {
     class Program
     {

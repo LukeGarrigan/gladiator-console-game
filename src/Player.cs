@@ -1,17 +1,18 @@
-using Weapons;
+using GladiatorGame.Weapons;
 using System.Collections.Generic;
-using Attacks;
-using Entities;
+using GladiatorGame.Attacker;
+using GladiatorGame.Entities;
 using System;
 using System.Linq;
 
-namespace Players
+namespace GladiatorGame.Players
 {
 
     public class Player : Entity, IAttacker<Entity>
     {
         List<Weapon> weapons = new List<Weapon>();
 
+    
         public Player(string name) : base(100, new BasicSword(), "Player")
         {
             this.Name = name;

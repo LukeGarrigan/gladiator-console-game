@@ -1,6 +1,6 @@
 using System;
 
-namespace Weapons
+namespace GladiatorGame.Weapons
 {
     public abstract class Weapon
     {
