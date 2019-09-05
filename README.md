@@ -8,9 +8,9 @@ Just a text-based game to play around with some C# in an attempt to understand t
 - Delegates
 - Tasks and multithreading
 - Implicit Typing
+- Optional parameters
 
 ## Some C# feature fluff I'd like to add:
-- Optional parameters
 - Async & await
 - Attributes
 - Events

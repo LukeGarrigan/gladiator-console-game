@@ -4,6 +4,8 @@ using GladiatorGame.Attacker;
 using GladiatorGame.Entities;
 using System;
 using System.Linq;
+using GladiatorGame.Gear;
+using GladiatorGame.Gear.Helmets;
 
 namespace GladiatorGame.Players
 {
@@ -12,27 +14,26 @@ namespace GladiatorGame.Players
     {
         List<Weapon> weapons = new List<Weapon>();
 
-
         public Player(string name)
         {
-
             this.Health = 100;
-            this.Weapon = new BasicSword();
             this.Name = name;
+            SetupPlayerItems();
+            System.Console.WriteLine($"You have equiped a [{Weapon.Name}] which does damage from [{Weapon.MinDamage}-{Weapon.MaxDamage}] every [{Weapon.AttackSpeed}s]");
+        }
+
+        private void SetupPlayerItems()
+        {
+            this.Helmet = new StrawHat();
+            this.Weapon = new BasicSword();
+
             this.weapons.Add(this.Weapon);
             this.weapons.Add(new ButterKnife()); // secondary wep, mainly to show that you can switch between 
-
-            System.Console.WriteLine($"You have equiped a [{Weapon.Name}] which does damage from [{Weapon.MinDamage}-{Weapon.MaxDamage}] every [{Weapon.AttackSpeed}s]");
         }
 
         public void SwitchWeapon(string weaponName)
         {
-            var weaponToSwitchTo = (from wep in weapons
-                                    where wep.Name == weaponName
-                                    select wep);
-
-            var newWep = weaponToSwitchTo.FirstOrDefault();
-
+            var newWep = GetWeapon(weaponName);
             if (newWep != null)
             {
                 System.Console.WriteLine($"You put away the [{Weapon.Name}] and equip the [{newWep.Name}] ");
@@ -42,6 +43,15 @@ namespace GladiatorGame.Players
             {
                 System.Console.WriteLine($"You do not have a weapon called {weaponName}");
             }
+        }
+
+        private Weapon GetWeapon(string weaponName)
+        {
+            var weaponToSwitchTo = (from wep in weapons
+                                    where wep.Name == weaponName
+                                    select wep);
+
+            return weaponToSwitchTo.FirstOrDefault();
         }
 
         public void EquipNewWeapon(Weapon newWep)
@@ -78,5 +88,6 @@ namespace GladiatorGame.Players
         public string Name { get; set; }
         public Weapon Weapon { get; set; }
         public int Health { get; set; }
+        public Armour Helmet { get; set; }
     }
 }
