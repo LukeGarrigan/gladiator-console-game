@@ -8,7 +8,6 @@ namespace SimpleGameEngine
 
     public class GameEngine
     {
-
         public static void StartGame(Player player)
         {
             System.Console.WriteLine("Before you get started here are a list of commands you can enter!");
@@ -16,27 +15,46 @@ namespace SimpleGameEngine
             while (true)
             {
                 string input = Console.ReadLine();
-                if (input == "h")
+
+                if (input.Equals("h"))
                 {
                     DisplayHelpScreen();
                 }
-                else if (input == "i")
+                else if (input.Equals("i"))
                 {
                     player.OutputInventory();
                 }
                 else if (input.StartsWith("equip"))
                 {
-                    var wep = input.Substring(6, input.Length - 6);
-                    player.SwitchWeapon(wep);
+                    SwitchPlayerWeapon(player, input);
                 }
                 else if (input.Equals("fight"))
                 {
-
-                    var enemy = EnemyFactory.CreateEnemy(player);
-                    var battle = new Battle(player, enemy);
-                    battle.BeginBattle();
+                    StartFight(player);
                 }
+                else if (input.Equals("q"))
+                {
+                    break;
+                }
+                else
+                {
+                    System.Console.WriteLine($"{input} is not a valid command");
+                }
+                System.Console.WriteLine("Type 'fight' to bring on your next opponent");
             }
+        }
+
+        private static void StartFight(Player player)
+        {
+            var enemy = EnemyFactory.CreateEnemy(player);
+            var battle = new Battle(player, enemy);
+            battle.BeginBattle();
+        }
+
+        private static void SwitchPlayerWeapon(Player player, string input)
+        {
+            var wep = input.Substring(6, input.Length - 6);
+            player.SwitchWeapon(wep);
         }
 
         private static void DisplayHelpScreen()
