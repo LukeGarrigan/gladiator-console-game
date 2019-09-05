@@ -4,20 +4,11 @@ namespace GladiatorGame.Entities
 {
 
 
-    public class Entity
+    public interface IEntity
     {
-
-        public Entity(int health, Weapon weapon, string name)
-        {
-            this.Weapon = weapon;
-            this.Health = health;
-            this.Name = name;
-        }
-
-        public string Name { get; set; }
-        public Weapon Weapon { get; set; }
-        public int Health { get; set; }
-
+        string Name { get; set; }
+        Weapon Weapon { get; set; }
+        int Health { get; set; }
 
     }
 

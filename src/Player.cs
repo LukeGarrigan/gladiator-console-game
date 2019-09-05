@@ -8,13 +8,16 @@ using System.Linq;
 namespace GladiatorGame.Players
 {
 
-    public class Player : Entity, IAttacker<Entity>
+    public class Player : IEntity, IAttacker<IEntity>
     {
         List<Weapon> weapons = new List<Weapon>();
 
-    
-        public Player(string name) : base(100, new BasicSword(), "Player")
+
+        public Player(string name)
         {
+
+            this.Health = 100;
+            this.Weapon = new BasicSword();
             this.Name = name;
             this.weapons.Add(this.Weapon);
             this.weapons.Add(new ButterKnife()); // secondary wep, mainly to show that you can switch between 
@@ -48,7 +51,7 @@ namespace GladiatorGame.Players
             this.Weapon = newWep;
         }
 
-        public int Attack(Entity enemy)
+        public int Attack(IEntity enemy)
         {
             var attackDamage = Weapon.DoAttack();
             enemy.Health -= attackDamage;
@@ -70,5 +73,10 @@ namespace GladiatorGame.Players
                 System.Console.WriteLine();
             }
         }
+
+        
+        public string Name { get; set; }
+        public Weapon Weapon { get; set; }
+        public int Health { get; set; }
     }
 }

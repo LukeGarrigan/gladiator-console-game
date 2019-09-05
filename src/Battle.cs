@@ -37,13 +37,13 @@ namespace GladiatorGame.Battles
             this.DisplayWinner(player, enemy);
         }
 
-        private Task GetFightTask(Entity attacker, Entity attackee)
+        private Task GetFightTask(IEntity attacker, IEntity attackee)
         {
             return new Task(() =>
             {
                 while (attackee.Health > 0 && attacker.Health > 0)
                 {
-                    ((IAttacker<Entity>)attacker).Attack(attackee);
+                    ((IAttacker<IEntity>)attacker).Attack(attackee);
                     Thread.Sleep((int)(attacker.Weapon.AttackSpeed * 1000));
                 }
             });
