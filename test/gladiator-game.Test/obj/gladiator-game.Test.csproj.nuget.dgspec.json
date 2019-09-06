@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Projects\\C#\\first-console-game\\first-console-game.csproj": {}
+    "C:\\Projects\\C#\\first-console-game\\test\\gladiator-game.Test\\gladiator-game.Test.csproj": {}
   },
   "projects": {
-    "C:\\Projects\\C#\\first-console-game\\first-console-game.csproj": {
+    "C:\\Projects\\C#\\first-console-game\\test\\gladiator-game.Test\\gladiator-game.Test.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Projects\\C#\\first-console-game\\first-console-game.csproj",
-        "projectName": "first-console-game",
-        "projectPath": "C:\\Projects\\C#\\first-console-game\\first-console-game.csproj",
+        "projectUniqueName": "C:\\Projects\\C#\\first-console-game\\test\\gladiator-game.Test\\gladiator-game.Test.csproj",
+        "projectName": "gladiator-game.Test",
+        "projectPath": "C:\\Projects\\C#\\first-console-game\\test\\gladiator-game.Test\\gladiator-game.Test.csproj",
         "packagesPath": "C:\\Users\\luke.garrigan\\.nuget\\packages\\",
-        "outputPath": "C:\\Projects\\C#\\first-console-game\\obj\\",
+        "outputPath": "C:\\Projects\\C#\\first-console-game\\test\\gladiator-game.Test\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -39,11 +39,23 @@
       "frameworks": {
         "netcoreapp2.2": {
           "dependencies": {
+            "Microsoft.NET.Test.Sdk": {
+              "target": "Package",
+              "version": "[16.0.1, )"
+            },
             "Microsoft.NETCore.App": {
               "suppressParent": "All",
               "target": "Package",
               "version": "[2.2.0, )",
               "autoReferenced": true
+            },
+            "xunit": {
+              "target": "Package",
+              "version": "[2.4.0, )"
+            },
+            "xunit.runner.visualstudio": {
+              "target": "Package",
+              "version": "[2.4.0, )"
             }
           },
           "imports": [

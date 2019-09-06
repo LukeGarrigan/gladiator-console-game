@@ -1,9 +1,11 @@
+using System;
 using System.Threading;
 using System.Threading.Tasks;
 using GladiatorGame.Attacker;
 using GladiatorGame.Enemies;
 using GladiatorGame.Entities;
 using GladiatorGame.Players;
+using GladiatorGame.SimpleGameEngine;
 
 namespace GladiatorGame.Battles
 {
@@ -19,7 +21,6 @@ namespace GladiatorGame.Battles
             this.enemy = enemy;
         }
 
-
         public void BeginBattle()
         {
             System.Console.WriteLine($"You enter the arena with {enemy.Name} they are using a {enemy.Weapon.Name}");
@@ -34,7 +35,7 @@ namespace GladiatorGame.Battles
 
             Task.WaitAny(playerAttacks, enemyAttacks);
 
-            this.DisplayWinner(player, enemy);
+            this.DisplayWinner();
         }
 
         private Task GetFightTask(IEntity attacker, IEntity attackee)
@@ -49,32 +50,34 @@ namespace GladiatorGame.Battles
             });
         }
 
-
-
-        private void DisplayWinner(Player player, Enemy enemy)
+        private void DisplayWinner()
         {
             System.Console.WriteLine("");
             if (enemy.Health < 0)
             {
-                player.Health = 100;
-                System.Console.WriteLine($"You destroy {enemy.Name}");
-                System.Console.WriteLine($"You loot the body and find: {enemy.Weapon.Name}");
-                enemy.Weapon.OutputStats();
-                System.Console.WriteLine("Would you like to pick it up and equip it? (y/n)");
-                var input = System.Console.ReadLine();
-
-                if (input.ToLower() == "y")
-                {
-                    player.EquipNewWeapon(enemy.Weapon);
-                }
+                ExecutePlayerWinning();
             }
             else
             {
                 System.Console.WriteLine($"You have been defeated by {enemy.Name}");
+                System.Threading.Thread.Sleep(5000);
+                new QuitGame().Execute();
             }
         }
 
+        private void ExecutePlayerWinning()
+        {
+            player.Health = 100;
+            System.Console.WriteLine($"You destroy {enemy.Name}");
+            System.Console.WriteLine($"You loot the body and find: {enemy.Weapon.Name}");
+            enemy.Weapon.OutputStats();
+            System.Console.WriteLine("Would you like to pick it up and equip it? (y/n)");
+            var input = System.Console.ReadLine();
 
-
+            if (input.ToLower() == "y")
+            {
+                player.EquipNewWeapon(enemy.Weapon);
+            }
+        }
     }
 }

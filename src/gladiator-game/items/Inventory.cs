@@ -1,5 +1,6 @@
 
 
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -16,14 +17,18 @@ namespace GladiatorGame.Items
             this.Items = new List<Item>();
             this.WieldedHelmet = new StrawHat();
             this.WieldedWeapon = new BasicSword();
-
-            this.Items.Add(this.WieldedWeapon);
-            this.Items.Add(this.WieldedHelmet);
             this.Items.Add(new ButterKnife()); // secondary wep, mainly to show that you can switch between 
         }
 
         public List<Item> Items { get; set; }
 
+        internal void EquipNewWeapon(Weapon newWep)
+        {
+            System.Console.WriteLine($"You put away the {WieldedWeapon.Name} and equip the {newWep.Name} ");
+            this.Items.Add(this.WieldedWeapon);
+            this.WieldedWeapon = newWep;
+            AddItem(newWep);
+        }
 
         public void AddItem(Item item)
         {
@@ -35,7 +40,9 @@ namespace GladiatorGame.Items
             var newWep = GetWeaponByName(weaponName);
             if (newWep != null)
             {
+                this.Items.Remove(newWep);
                 System.Console.WriteLine($"You put away the [{WieldedWeapon.Name}] and equip the [{newWep.Name}] ");
+                this.Items.Add(this.WieldedWeapon);
                 this.WieldedWeapon = newWep;
             }
             else
@@ -57,6 +64,12 @@ namespace GladiatorGame.Items
 
         public void OutputInventory()
         {
+            PrintItemsInInventory();
+            PrintEquippedItems();
+        }
+        public void PrintItemsInInventory()
+        {
+
             System.Console.WriteLine("--------------------------------------------------------------------");
             System.Console.WriteLine("----------------------  Your inventory  ----------------------------");
             System.Console.WriteLine("--------------------------------------------------------------------");
@@ -65,6 +78,16 @@ namespace GladiatorGame.Items
                 item.OutputStats();
                 System.Console.WriteLine();
             }
+        }
+
+        public void PrintEquippedItems()
+        {
+            System.Console.WriteLine("--------------------------------------------------------------------");
+            System.Console.WriteLine("----------------------  Equipped Items  ----------------------------");
+            System.Console.WriteLine("--------------------------------------------------------------------");
+            WieldedHelmet.OutputStats();
+            System.Console.WriteLine();
+            WieldedWeapon.OutputStats();
         }
 
         public ArmourBase WieldedHelmet { get; set; }

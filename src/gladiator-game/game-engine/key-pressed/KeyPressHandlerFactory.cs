@@ -1,4 +1,3 @@
-using GladiatorGame.Battles;
 using GladiatorGame.Players;
 using GladiatorGame.SimpleGameEngine.Handler;
 

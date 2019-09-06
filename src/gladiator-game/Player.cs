@@ -20,9 +20,7 @@ namespace GladiatorGame.Players
 
         public void EquipNewWeapon(Weapon newWep)
         {
-            this.Inventory.AddItem(newWep);
-            System.Console.WriteLine($"You put away the {Weapon.Name} and equip the {newWep.Name} ");
-            this.Weapon = newWep;
+            this.Inventory.EquipNewWeapon(newWep);
         }
 
         public void SwitchWeapon(string weapon)
