@@ -1,0 +1,17 @@
+C:\Projects\C#\first-console-game\test\gladiator-game.Test\obj\Debug\netcoreapp2.2\gladiator-game.Test.csprojAssemblyReference.cache
+C:\Projects\C#\first-console-game\test\gladiator-game.Test\obj\Debug\netcoreapp2.2\gladiator-game.Test.csproj.CoreCompileInputs.cache
+C:\Projects\C#\first-console-game\test\gladiator-game.Test\obj\Debug\netcoreapp2.2\gladiator-game.Test.AssemblyInfoInputs.cache
+C:\Projects\C#\first-console-game\test\gladiator-game.Test\obj\Debug\netcoreapp2.2\gladiator-game.Test.AssemblyInfo.cs
+C:\Projects\C#\first-console-game\test\gladiator-game.Test\bin\Debug\netcoreapp2.2\xunit.runner.visualstudio.dotnetcore.testadapter.dll
+C:\Projects\C#\first-console-game\test\gladiator-game.Test\bin\Debug\netcoreapp2.2\xunit.runner.reporters.netcoreapp10.dll
+C:\Projects\C#\first-console-game\test\gladiator-game.Test\bin\Debug\netcoreapp2.2\xunit.runner.utility.netcoreapp10.dll
+C:\Projects\C#\first-console-game\test\gladiator-game.Test\bin\Debug\netcoreapp2.2\gladiator-game.Test.deps.json
+C:\Projects\C#\first-console-game\test\gladiator-game.Test\bin\Debug\netcoreapp2.2\gladiator-game.Test.runtimeconfig.json
+C:\Projects\C#\first-console-game\test\gladiator-game.Test\bin\Debug\netcoreapp2.2\gladiator-game.Test.runtimeconfig.dev.json
+C:\Projects\C#\first-console-game\test\gladiator-game.Test\bin\Debug\netcoreapp2.2\gladiator-game.Test.dll
+C:\Projects\C#\first-console-game\test\gladiator-game.Test\bin\Debug\netcoreapp2.2\gladiator-game.Test.pdb
+C:\Projects\C#\first-console-game\test\gladiator-game.Test\bin\Debug\netcoreapp2.2\first-console-game.dll
+C:\Projects\C#\first-console-game\test\gladiator-game.Test\bin\Debug\netcoreapp2.2\first-console-game.pdb
+C:\Projects\C#\first-console-game\test\gladiator-game.Test\obj\Debug\netcoreapp2.2\gladiator-game.Test.csproj.CopyComplete
+C:\Projects\C#\first-console-game\test\gladiator-game.Test\obj\Debug\netcoreapp2.2\gladiator-game.Test.dll
+C:\Projects\C#\first-console-game\test\gladiator-game.Test\obj\Debug\netcoreapp2.2\gladiator-game.Test.pdb

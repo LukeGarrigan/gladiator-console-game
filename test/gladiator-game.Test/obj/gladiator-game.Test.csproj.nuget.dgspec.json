@@ -4,6 +4,56 @@
     "C:\\Projects\\C#\\first-console-game\\test\\gladiator-game.Test\\gladiator-game.Test.csproj": {}
   },
   "projects": {
+    "C:\\Projects\\C#\\first-console-game\\src\\gladiator-game\\first-console-game.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Projects\\C#\\first-console-game\\src\\gladiator-game\\first-console-game.csproj",
+        "projectName": "first-console-game",
+        "projectPath": "C:\\Projects\\C#\\first-console-game\\src\\gladiator-game\\first-console-game.csproj",
+        "packagesPath": "C:\\Users\\luke.garrigan\\.nuget\\packages\\",
+        "outputPath": "C:\\Projects\\C#\\first-console-game\\src\\gladiator-game\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\luke.garrigan\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp2.2"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp2.2": {
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp2.2": {
+          "dependencies": {
+            "Microsoft.NETCore.App": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[2.2.0, )",
+              "autoReferenced": true
+            }
+          },
+          "imports": [
+            "net461"
+          ],
+          "assetTargetFallback": true,
+          "warn": true
+        }
+      }
+    },
     "C:\\Projects\\C#\\first-console-game\\test\\gladiator-game.Test\\gladiator-game.Test.csproj": {
       "version": "1.0.0",
       "restore": {
@@ -27,7 +77,11 @@
         },
         "frameworks": {
           "netcoreapp2.2": {
-            "projectReferences": {}
+            "projectReferences": {
+              "C:\\Projects\\C#\\first-console-game\\src\\gladiator-game\\first-console-game.csproj": {
+                "projectPath": "C:\\Projects\\C#\\first-console-game\\src\\gladiator-game\\first-console-game.csproj"
+              }
+            }
           }
         },
         "warningProperties": {

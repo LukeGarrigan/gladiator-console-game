@@ -1675,6 +1675,16 @@
         "build": {
           "build/netcoreapp1.0/xunit.runner.visualstudio.props": {}
         }
+      },
+      "first-console-game/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v2.2",
+        "compile": {
+          "bin/placeholder/first-console-game.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/first-console-game.dll": {}
+        }
       }
     }
   },
@@ -5847,12 +5857,18 @@
         "xunit.runner.visualstudio.2.4.0.nupkg.sha512",
         "xunit.runner.visualstudio.nuspec"
       ]
+    },
+    "first-console-game/1.0.0": {
+      "type": "project",
+      "path": "../../src/gladiator-game/first-console-game.csproj",
+      "msbuildProject": "../../src/gladiator-game/first-console-game.csproj"
     }
   },
   "projectFileDependencyGroups": {
     ".NETCoreApp,Version=v2.2": [
       "Microsoft.NET.Test.Sdk >= 16.0.1",
       "Microsoft.NETCore.App >= 2.2.0",
+      "first-console-game >= 1.0.0",
       "xunit >= 2.4.0",
       "xunit.runner.visualstudio >= 2.4.0"
     ]
@@ -5884,7 +5900,11 @@
       },
       "frameworks": {
         "netcoreapp2.2": {
-          "projectReferences": {}
+          "projectReferences": {
+            "C:\\Projects\\C#\\first-console-game\\src\\gladiator-game\\first-console-game.csproj": {
+              "projectPath": "C:\\Projects\\C#\\first-console-game\\src\\gladiator-game\\first-console-game.csproj"
+            }
+          }
         }
       },
       "warningProperties": {
