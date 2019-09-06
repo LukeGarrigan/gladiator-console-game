@@ -32,7 +32,7 @@ namespace gladiator_game.Test
         {
             var player = new Player("Luke");
             var wepToSwitch = player.Inventory.Items[0];
-            
+        
             player.SwitchWeapon(wepToSwitch.Name);
 
             Assert.Equal(player.Inventory.WieldedWeapon, wepToSwitch);

@@ -90,6 +90,17 @@ namespace GladiatorGame.Items
             WieldedWeapon.OutputStats();
         }
 
+        public void DeleteItem(string name)
+        {
+            for (var i = Items.Count - 1; i >= 0; i--)
+            {
+                if (Items[i].Name == name) 
+                {
+                    Items.Remove(Items[i]);
+                }
+            }
+        }
+
         public ArmourBase WieldedHelmet { get; set; }
         public Weapon WieldedWeapon { get; set; }
 

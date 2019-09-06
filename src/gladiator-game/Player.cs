@@ -42,8 +42,7 @@ namespace GladiatorGame.Players
         {
             Inventory.OutputInventory();
         }
-
-
+        
         public string Name { get; set; }
         public int Health { get; set; }
         public Inventory Inventory { get; }
