@@ -9,9 +9,9 @@
             "type": "coreclr",
             "request": "launch",
             "preLaunchTask": "build",
-            "program": "${workspaceFolder}/gladiator-game/src/bin/Debug/netcoreapp2.2/first-console-game.dll",
+            "program": "${workspaceFolder}/src/gladiator-game/bin/Debug/netcoreapp2.2/first-console-game.dll",
             "args": [],
-            "cwd": "${workspaceFolder}/gladiator-game/src",
+            "cwd": "${workspaceFolder}/src/gladiator-game",
             "console": "externalTerminal",
             "stopAtEntry": false
         },
