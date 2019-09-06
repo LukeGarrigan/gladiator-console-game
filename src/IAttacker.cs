@@ -1,4 +1,5 @@
-using GladiatorGame.Weapons;
+
+using GladiatorGame.Items.Weapons;
 
 namespace GladiatorGame.Attacker
 {

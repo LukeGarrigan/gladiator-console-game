@@ -1,7 +1,7 @@
 using System;
 using System.Collections.Generic;
 using GladiatorGame.Players;
-using GladiatorGame.Weapons;
+using GladiatorGame.Items.Weapons;
 
 namespace GladiatorGame.Enemies
 {

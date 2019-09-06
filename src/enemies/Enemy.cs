@@ -1,6 +1,6 @@
-using GladiatorGame.Weapons;
 using GladiatorGame.Attacker;
 using GladiatorGame.Entities;
+using GladiatorGame.Items.Weapons;
 using System;
 
 namespace GladiatorGame.Enemies

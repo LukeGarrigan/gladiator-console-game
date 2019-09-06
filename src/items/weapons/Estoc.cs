@@ -1,4 +1,4 @@
-namespace GladiatorGame.Weapons
+namespace GladiatorGame.Items.Weapons
 {
     public class Estoc : Weapon 
     { 

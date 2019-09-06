@@ -1,13 +1,14 @@
 using System;
+using GladiatorGame.Items.ArmourTypes;
 
-namespace GladiatorGame.Gear.Helmets
+namespace GladiatorGame.Items.Helmets
 {
-
-    public class StrawHat : IHelmet
+    public class StrawHat : ArmourBase
     {
         public StrawHat()
         {
             this.Name = "Straw Hat";
+            this.ArmourType = ArmourType.HELMET;
             this.SetArmour();       
         }
 
@@ -15,9 +16,6 @@ namespace GladiatorGame.Gear.Helmets
         {
             this.Armour = newArmourValue;
         }
-
-        public int Armour { get; set; }
-        public string Name { get; set; }
     }
 
 }

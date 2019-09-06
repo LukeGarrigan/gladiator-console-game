@@ -1,6 +1,6 @@
 using System;
 
-namespace GladiatorGame.Weapons
+namespace GladiatorGame.Items.Weapons
 {
     public class BasicSword : Weapon 
     { 

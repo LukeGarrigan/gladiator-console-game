@@ -1,8 +1,8 @@
 using System;
 
-namespace GladiatorGame.Weapons
+namespace GladiatorGame.Items.Weapons
 {
-    public abstract class Weapon
+    public abstract class Weapon : Item
     {
         public Weapon(int minDamage, int maxDamage, double attackSpeed, string name, string movement) 
         {
@@ -17,9 +17,8 @@ namespace GladiatorGame.Weapons
         public int MinDamage { get; }
         public int MaxDamage { get; }
         public double AttackSpeed {get;}
-        public string Name { get; }
         public string Movement { get; }
-
+        public string Name { get; set; }
 
         public int DoAttack() 
         {
