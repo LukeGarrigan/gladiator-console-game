@@ -1,3 +1,4 @@
+using GladiatorGame.Items;
 using GladiatorGame.Items.Weapons;
 
 namespace GladiatorGame.Entities
@@ -8,8 +9,10 @@ namespace GladiatorGame.Entities
     {
         string Name { get; set; }
         Weapon Weapon { get; set; }
+        ArmourBase Armour { get; set; }
         int Health { get; set; }
 
+        void TakeDamage(int attackDamage);
     }
 
 }

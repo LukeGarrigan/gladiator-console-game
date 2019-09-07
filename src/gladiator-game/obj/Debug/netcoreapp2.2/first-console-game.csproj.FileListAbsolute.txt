@@ -20,3 +20,14 @@ C:\Projects\C#\first-console-game\src\gladiator-game\obj\Debug\netcoreapp2.2\fir
 C:\Projects\C#\first-console-game\src\gladiator-game\obj\Debug\netcoreapp2.2\first-console-game.AssemblyInfo.cs
 C:\Projects\C#\first-console-game\src\gladiator-game\obj\Debug\netcoreapp2.2\first-console-game.dll
 C:\Projects\C#\first-console-game\src\gladiator-game\obj\Debug\netcoreapp2.2\first-console-game.pdb
+C:\Users\lukeg\Documents\CSharpProjects\gladapp\gladiator-console-game\src\gladiator-game\bin\Debug\netcoreapp2.2\first-console-game.deps.json
+C:\Users\lukeg\Documents\CSharpProjects\gladapp\gladiator-console-game\src\gladiator-game\bin\Debug\netcoreapp2.2\first-console-game.runtimeconfig.json
+C:\Users\lukeg\Documents\CSharpProjects\gladapp\gladiator-console-game\src\gladiator-game\bin\Debug\netcoreapp2.2\first-console-game.runtimeconfig.dev.json
+C:\Users\lukeg\Documents\CSharpProjects\gladapp\gladiator-console-game\src\gladiator-game\bin\Debug\netcoreapp2.2\first-console-game.dll
+C:\Users\lukeg\Documents\CSharpProjects\gladapp\gladiator-console-game\src\gladiator-game\bin\Debug\netcoreapp2.2\first-console-game.pdb
+C:\Users\lukeg\Documents\CSharpProjects\gladapp\gladiator-console-game\src\gladiator-game\obj\Debug\netcoreapp2.2\first-console-game.csprojAssemblyReference.cache
+C:\Users\lukeg\Documents\CSharpProjects\gladapp\gladiator-console-game\src\gladiator-game\obj\Debug\netcoreapp2.2\first-console-game.csproj.CoreCompileInputs.cache
+C:\Users\lukeg\Documents\CSharpProjects\gladapp\gladiator-console-game\src\gladiator-game\obj\Debug\netcoreapp2.2\first-console-game.AssemblyInfoInputs.cache
+C:\Users\lukeg\Documents\CSharpProjects\gladapp\gladiator-console-game\src\gladiator-game\obj\Debug\netcoreapp2.2\first-console-game.AssemblyInfo.cs
+C:\Users\lukeg\Documents\CSharpProjects\gladapp\gladiator-console-game\src\gladiator-game\obj\Debug\netcoreapp2.2\first-console-game.dll
+C:\Users\lukeg\Documents\CSharpProjects\gladapp\gladiator-console-game\src\gladiator-game\obj\Debug\netcoreapp2.2\first-console-game.pdb

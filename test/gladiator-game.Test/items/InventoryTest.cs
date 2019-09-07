@@ -17,7 +17,5 @@ namespace gladiator_game.Test
             Assert.False(inventory.Items.Contains(itemToDelete));
         }
 
-
-
     }
 }

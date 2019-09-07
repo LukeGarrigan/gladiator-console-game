@@ -27,7 +27,14 @@ namespace GladiatorGame.Items
             System.Console.WriteLine($"You put away the {WieldedWeapon.Name} and equip the {newWep.Name} ");
             this.Items.Add(this.WieldedWeapon);
             this.WieldedWeapon = newWep;
-            AddItem(newWep);
+        }
+
+
+        internal void EquipNewHelmet(ArmourBase newHelm)
+        {
+            System.Console.WriteLine($"You put away the {WieldedHelmet.Name} and equip the {newHelm.Name} ");
+            this.Items.Add(this.WieldedHelmet);
+            this.WieldedHelmet = newHelm;
         }
 
         public void AddItem(Item item)

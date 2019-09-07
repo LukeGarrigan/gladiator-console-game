@@ -28,25 +28,34 @@ namespace GladiatorGame.Players
             this.Inventory.SwitchWeapon(weapon);
         }
 
-        public int Attack(IEntity enemy)
+        public void Attack(IEntity enemy)
         {
             var attackDamage = Weapon.DoAttack();
-            enemy.Health -= attackDamage;
+            enemy.TakeDamage(attackDamage);
             var enemyHealth = enemy.Health < 0 ? 0 : enemy.Health;
-
             System.Console.WriteLine(String.Format("|{0, 20}|{1, 20}|", $"{Health} (0) ", $"{enemyHealth} (-{attackDamage}) "));
-            return attackDamage;
         }
 
         public void OutputInventory()
         {
             Inventory.OutputInventory();
         }
-        
+
+        public void TakeDamage(int attackDamage)
+        {
+            var protection = Armour.Armour;
+            var totalDamage = attackDamage - protection;
+            
+            if (totalDamage > 0)
+            {
+                this.Health -= totalDamage;
+            }
+        }
+
         public string Name { get; set; }
         public int Health { get; set; }
         public Inventory Inventory { get; }
-        public Weapon Weapon { get => this.Inventory.WieldedWeapon; set => this.Inventory.AddItem(value); }
-
+        public Weapon Weapon { get => this.Inventory.WieldedWeapon; set => this.Inventory.EquipNewWeapon(value); }
+        public ArmourBase Armour { get =>this.Inventory.WieldedHelmet; set => this.Inventory.EquipNewHelmet(value);} 
     }
 }

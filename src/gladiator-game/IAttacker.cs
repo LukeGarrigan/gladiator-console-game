@@ -8,7 +8,7 @@ namespace GladiatorGame.Attacker
     {
         Weapon Weapon { get; set; }
         
-        int Attack(T attackee);
+        void Attack(T attackee);
     }
 
 }
