@@ -3,7 +3,6 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
 using GladiatorGame.Items.Helmets;
 using GladiatorGame.Items.Weapons;
 
@@ -29,6 +28,10 @@ namespace GladiatorGame.Items
             this.WieldedWeapon = newWep;
         }
 
+        public List<T> GetItemsOfType<T>()
+        {
+            return Items.OfType<T>().ToList();
+        }
 
         internal void EquipNewHelmet(ArmourBase newHelm)
         {

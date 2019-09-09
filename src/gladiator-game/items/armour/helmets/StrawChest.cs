@@ -7,6 +7,7 @@ namespace GladiatorGame.Items.Helmets
     {
         public StrawChest()
         {
+            this.Name = "Straw Chest";
             this.ArmourType = ArmourType.CHEST;
             this.Armour = 15;
         }

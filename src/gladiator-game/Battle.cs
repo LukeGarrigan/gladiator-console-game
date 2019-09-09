@@ -21,6 +21,7 @@ namespace GladiatorGame.Battles
             this.enemy = enemy;
         }
 
+        [ToBeEnhanced("Make it more obvious who is attacking who and maybe interactive in some way")]
         public void BeginBattle()
         {
             System.Console.WriteLine($"You enter the arena with {enemy.Name} they are using a {enemy.Weapon.Name}");
