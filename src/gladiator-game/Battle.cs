@@ -6,6 +6,7 @@ using GladiatorGame.Enemies;
 using GladiatorGame.Entities;
 using GladiatorGame.Players;
 using GladiatorGame.SimpleGameEngine;
+using GladiatorGame.Attributes;
 
 namespace GladiatorGame.Battles
 {

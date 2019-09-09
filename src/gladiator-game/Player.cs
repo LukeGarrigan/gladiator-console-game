@@ -3,6 +3,7 @@ using GladiatorGame.Attacker;
 using GladiatorGame.Entities;
 using System;
 using GladiatorGame.Items;
+using GladiatorGame.Attributes;
 
 namespace GladiatorGame.Players
 {

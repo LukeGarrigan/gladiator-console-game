@@ -1,18 +1,23 @@
 using System;
 
-public class ToBeEnhanced : Attribute  
+
+namespace GladiatorGame.Attributes
 {
-
-    private string toChange;
-    
-    public ToBeEnhanced(string toChange)
+    public class ToBeEnhanced : Attribute
     {
-        this.toChange = toChange;
-    }
 
-    public override string ToString()
-    {
-        return this.toChange;
+        private string toChange;
+
+        public ToBeEnhanced(string toChange)
+        {
+            this.toChange = toChange;
+        }
+
+        public override string ToString()
+        {
+            return this.toChange;
+        }
+
     }
 
 }
