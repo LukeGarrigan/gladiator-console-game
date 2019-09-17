@@ -6,6 +6,7 @@ using GladiatorGame.Enemies;
 using GladiatorGame.Entities;
 using GladiatorGame.Players;
 using GladiatorGame.SimpleGameEngine;
+using GladiatorGame.Attributes;
 
 namespace GladiatorGame.Battles
 {
@@ -21,6 +22,7 @@ namespace GladiatorGame.Battles
             this.enemy = enemy;
         }
 
+        [ToBeEnhanced("Make it more obvious who is attacking who and maybe interactive in some way")]
         public void BeginBattle()
         {
             System.Console.WriteLine($"You enter the arena with {enemy.Name} they are using a {enemy.Weapon.Name}");

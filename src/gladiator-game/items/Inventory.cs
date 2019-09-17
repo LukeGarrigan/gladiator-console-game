@@ -27,6 +27,10 @@ namespace GladiatorGame.Items
             this.WieldedWeapon = newWep;
         }
 
+        public List<T> GetItemsOfType<T>()
+        {
+            return Items.OfType<T>().ToList();
+        }
 
         internal void EquipNewHelmet(ArmourBase newHelm)
         {

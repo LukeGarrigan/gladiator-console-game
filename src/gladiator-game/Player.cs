@@ -3,6 +3,7 @@ using GladiatorGame.Attacker;
 using GladiatorGame.Entities;
 using System;
 using GladiatorGame.Items;
+using GladiatorGame.Attributes;
 
 namespace GladiatorGame.Players
 {
@@ -41,11 +42,11 @@ namespace GladiatorGame.Players
             Inventory.OutputInventory();
         }
 
+
+        [ToBeEnhanced("A more clever way to reduce damage depending on armour")]
         public void TakeDamage(int attackDamage)
         {
-            var protection = Armour.Armour;
-            var totalDamage = attackDamage - protection;
-            
+            var totalDamage = attackDamage - Armour.Armour;
             if (totalDamage > 0)
             {
                 this.Health -= totalDamage;

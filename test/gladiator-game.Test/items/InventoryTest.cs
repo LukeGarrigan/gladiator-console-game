@@ -35,7 +35,7 @@ namespace gladiator_game.Test
             Assert.True(inventory.WieldedWeapon.Equals(maul));
         }
 
-        
+
         [Fact]
         public void TestHasEquippedNewHelmet()
         {
