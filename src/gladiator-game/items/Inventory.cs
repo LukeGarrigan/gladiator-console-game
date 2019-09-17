@@ -1,9 +1,7 @@
 
 
-using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
 using GladiatorGame.Items.Helmets;
 using GladiatorGame.Items.Weapons;
 
@@ -101,7 +99,7 @@ namespace GladiatorGame.Items
         {
             for (var i = Items.Count - 1; i >= 0; i--)
             {
-                if (Items[i].Name == name) 
+                if (Items[i].Name == name)
                 {
                     Items.Remove(Items[i]);
                 }
