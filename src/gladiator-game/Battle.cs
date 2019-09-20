@@ -16,10 +16,17 @@ namespace GladiatorGame.Battles
         private Player player;
         private Enemy enemy;
 
+        public delegate void PlayerWonHandler();
+
+        public event PlayerWonHandler PlayerWon;
+
         public Battle(Player player, Enemy enemy)
         {
             this.player = player;
             this.enemy = enemy;
+
+            PlayerWon += new PlayerWonHandler(ResetHealth);
+            PlayerWon += new PlayerWonHandler(OutputStats);
         }
 
         [ToBeEnhanced("Make it more obvious who is attacking who and maybe interactive in some way")]
@@ -69,10 +76,7 @@ namespace GladiatorGame.Battles
 
         private void ExecutePlayerWinning()
         {
-            player.Health = 100;
-            System.Console.WriteLine($"You destroy {enemy.Name}");
-            System.Console.WriteLine($"You loot the body and find: {enemy.Weapon.Name}");
-            enemy.Weapon.OutputStats();
+            PlayerWon();
             System.Console.WriteLine("Would you like to pick it up and equip it? (y/n)");
             var input = System.Console.ReadLine();
 
@@ -80,6 +84,19 @@ namespace GladiatorGame.Battles
             {
                 player.EquipNewWeapon(enemy.Weapon);
             }
+        }
+
+        
+        public void ResetHealth()
+        {
+            player.Health = 100;
+        }
+
+        public void OutputStats()
+        {
+            System.Console.WriteLine($"You destroy {enemy.Name}");
+            System.Console.WriteLine($"You loot the body and find: {enemy.Weapon.Name}");
+            enemy.Weapon.OutputStats();
         }
     }
 }

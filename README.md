@@ -1,6 +1,6 @@
 ﻿# Gladiator Console Game ⚔
 
-Just a text-based game to play around with some C# in an attempt to understand the language.
+Just a text-based game to play around with some C# in an attempt to understand the language. The goal is to add as much C# feature fluff in the game as possible, this is the main focus, not the shoddy game.
 
 - ✔ Done, feature is in the code
 - ❎ Will be added at some point
@@ -17,8 +17,8 @@ Just a text-based game to play around with some C# in an attempt to understand t
 | Optional parameters | ✔ |
 | Enums | ✔ |
 | Attributes | ✔ |
+| Events | ✔ |
 |  Async & await| ❎ |
-| Events | ❎ |
 | Anonymous Types | ❎ |
 | Reflection| ❎ |
 | Extension methods| ❌ |
